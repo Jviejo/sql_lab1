@@ -1,15 +1,26 @@
-# sql_lab1
+# SQL LAB 1. LAB DE SQL
+## Objetivos
+1. Practicar la SQL basico
 
-To install dependencies:
+## Requerimientos.
+1. Fork este repositorio
+2. Clone este repositorio
 
+## Tareas a realizar
+0. Si no esta instalado bun, seguir instrucciones https://bun.sh/docs/installation
+1. Instalar dependencias
+ ```bash
+ bun install
+ ```
+
+2. Hacer bun test
 ```bash
-bun install
+bun test --watch
 ```
+3. La tarea estara acabada cuando todos los test esten pasados.
 
-To run:
 
-```bash
-bun run index.ts
-```
 
-This project was created using `bun init` in bun v1.0.30. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+
+
+
