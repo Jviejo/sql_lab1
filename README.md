@@ -15,7 +15,7 @@
 
 2. Hacer bun test
 ```bash
-bun test --watch
+bun run test --watch
 ```
 3. La tarea estara acabada cuando todos los test esten pasados.
 

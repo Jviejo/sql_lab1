@@ -1,0 +1,26 @@
+bun test v1.0.30 (1424a196)
+
+index.test.ts:
+{
+  contador: 91,
+}
+(pass) contar los clientes [0.40ms]
+11 |     expect(query.all()[0].contador).toBe(91);
+12 | })
+13 | 
+14 | test("contar los productos", () => {
+15 |     // act
+16 |     const query = db.query<any, any>("select count(*) contador from products");
+                       ^
+SQLiteError: no such table: products
+ errno: 1
+
+      at prepare (bun:sqlite:193:19)
+      at query (bun:sqlite:200:15)
+      at /Users/joseviejo/curso/codecripto/labs/sql_lab1/index.test.ts:16:19
+(fail) contar los productos [0.16ms]
+
+ 1 pass
+ 1 fail
+ 1 expect() calls
+Ran 2 tests across 1 files. [9.00ms]

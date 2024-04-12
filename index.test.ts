@@ -1,11 +1,23 @@
-import { expect, test } from "bun:test";
+import { expect, test, afterAll } from "bun:test";
 import { Database } from "bun:sqlite";
-
 const db = new Database("./Northwind_small.sqlite");
 
 
-test("Test 1", () => {
-    const query = db.query("select * from customer limit 2");
-    expect(query.all().length).toBe(2);
+test("contar los clientes", () => {
+    // act
+    const query = db.query<any, any>("select count(*) contador from customer");
+    // assert
+    console.log(query.all()[0])
+    expect(query.all()[0].contador).toBe(91);
 })
+
+test("contar los productos", () => {
+    // act
+    const query = db.query<any, any>("select count(*) contador from products");
+    // assert
+    
+    expect(query.all()[0].contador).toBe(91);
+})
+
+
 

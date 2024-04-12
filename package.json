@@ -2,6 +2,10 @@
   "name": "sql_lab1",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "test": "bun test 2>&1 | tee outfile.txt && bun upload.ts"
+   
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
